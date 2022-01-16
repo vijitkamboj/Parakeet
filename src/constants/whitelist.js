@@ -1,0 +1,5 @@
+
+
+export const WHITELISTED_NFTS = [
+    0x30B2556a45FBa8148f71d375C7275Dc1BCae5Fd2
+];

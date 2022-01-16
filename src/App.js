@@ -5,10 +5,9 @@ import Layout from "./containers/Layout";
 function App() {
   return (
     <Flex 
-      h="100vh"
       flexDir="column"
-      overflow="hidden"
       className="App"
+      height = "auto"
     >
       
       <Layout />

@@ -1,6 +1,7 @@
 import { Switch, Route, useHistory } from "react-router-dom";
 import { Button, Flex, Image, Heading,HStack, useColorMode } from "@chakra-ui/react";
 import Web3WalletConnectButton from "../components/Web3WalletConnectButton";
+import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import Home from "./Home";
 import Bridge from "./Bridge";
 import logo from "../assets/icon.png";
@@ -12,11 +13,9 @@ function Layout () {
         <Flex
             p="5%"
             pt="5vh"
-            w="100vw"
+            w="100%"
             flexDir="column"
-            // overflow="auto"
-            minH="100vh"
-            // backgroundColor="#f5f5f5"
+            h = "100vh"
         >
             <HStack 
                 justifyContent="space-around"
@@ -42,14 +41,15 @@ function Layout () {
                     >
                         Bridge
                     </Button>
+                    
+                    <Web3WalletConnectButton />
                     <Button 
                         // display={navSize === "small" ? "none" : "flex"}
                         onClick={toggleColorMode}
                         cursor="pointer"
                     >
-                        {colorMode === "light" ? "dark mode" : "light mode"}
+                        {colorMode === "light" ? <SunIcon/> : <MoonIcon/>}
                     </Button>
-                    <Web3WalletConnectButton />
                 </HStack>
             </HStack>
             <Switch>
